@@ -1,0 +1,89 @@
+{% include "student/header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</Details></title>
+</head>
+<body>
+    <div class="container-fluid account_sec">
+        <div class="col-lg-4">
+          <!-- <h1>teachers login</h1> -->
+          <h1></h1>
+          <ul>
+            <!-- <li>
+              <a href="/teacher_register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+            </li> -->
+            <li>
+              {% comment %} <a href="/add/"><span class="glyphicon glyphicon-pencil "></span> Add details</a> {% endcomment %}
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+            <img src="https://www.w3schools.com/bootstrap/bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+        </div>
+        <div class="col-lg-4">
+            <!-- <h1>Student details</h1> -->
+            <h1></h1>
+            <ul>
+              {% comment %} <li>
+                <a href="/register/"><span class="glyphicon glyphicon-user"></span>  Update details </a>
+              </li> {% endcomment %}
+              <li>
+                <a href="/show_result/"><span class="glyphicon glyphicon-signal "></span> Show result </a>
+              </li>
+            </ul>
+          </div>
+</body>
+</html>
+
+
+<style>  
+    body {
+        background-color: #1abc9c ;
+        font: 20px Montserrat, sans-serif;
+        line-height: 1.8;
+        color: #f5f6f7;
+      }
+      p {font-size: 16px;}
+      .margin {margin-bottom: 45px;}
+      .bg-1 { 
+        background-color: #1abc9c; /* Green */
+        color: #ffffff;
+      }
+      .bg-2 { 
+        background-color: #474e5d; /* Dark Blue */
+        color: #ffffff;
+      }
+      .bg-3 { 
+        background-color: #ffffff; /* White */
+        color: #555555;
+      }
+      .bg-4 { 
+        background-color: #2f2f2f; /* Black Gray */
+        color: #fff;
+      }
+     
+      .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        letter-spacing: 5px;
+      }
+      .navbar-nav  li a:hover {
+        color: #1abc9c !important;
+      }
+      .account_sec {
+        background: linear-gradient(to bottom, #33ffc2 0%, #16c3c9 100%);
+    }
+    .margin {
+      margin-bottom: 43px;
+      margin-top: 52px;
+    }
+</style>

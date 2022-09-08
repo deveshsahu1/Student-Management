@@ -1,0 +1,87 @@
+{% load static %}
+{% include "student/header.html" %}
+
+
+<div class="container-fluid">
+
+<div class="container">
+
+<section class="add_form">
+
+    <div class="heading">
+
+        <h1>Edit Person Details</h1>   
+       </div>
+
+    <form action="/update/{{obj.id}}"  method="post">
+        {% csrf_token %}
+      <!-- Firs Name input -->
+        <div class="form-group form-outline mb-4">
+            <label for="usr">First Name:</label>
+            <input type="text" class="form-control" value ="{{obj.first_name}}" id="usr" name="first_name">
+          </div>
+
+
+       <!-- Last Name input -->  
+          <div class="form-group form-outline mb-4">
+            <label for="usr">  Last Name:</label>
+            <input type="text" class="form-control" id="usr" value ="{{obj.last_name}}" name="last_name">
+          </div>
+          
+          <!-- Email input -->
+          <div class="form-group form-outline mb-4">
+              <label class="form-label" for="form1Example1">Email address</label>
+              <input type="email" id="form1Example1"  value ="{{obj.email_id}}" class="form-control" name="email"/>
+              
+            </div>
+        <!-- phone number input -->  
+          <div class="form-group form-outline mb-4">
+            <label for="usr">Age:</label>
+            <input type="text" class="form-control" id="usr"  value ="{{obj.age}}" name="phone_number">
+          </div>
+
+          
+        <!-- Address input -->  
+          <div class="form-group form-outline mb-4">
+
+            <label for="usr">Phone Number:</label>
+            <input type="text" class="form-control" id="usr"  value ="{{obj.phone_number}}" name="address">
+          </div>  
+
+        <!-- School name input -->  
+          <div class="form-group form-outline mb-4">
+            <label for="usr">Person profile:</label>
+            <input type="text" class="form-control" id="usr"  value ="{{obj.person_profile}}" name="school_name">
+          </div> 
+
+        <!-- Teacher name input -->  
+          <div class="form-group form-outline mb-4">
+            <label for="usr">Person profile:</label>
+            <input type="text" class="form-control" id="usr"  value ="{{obj.person_profile}}" name="teacher_name">
+          </div> 
+
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+
+      <li class="right_btn"><button type="button" class="btn btn-primary"><a href="/update/"> Update </a></button></li>
+
+</section>
+</div>    
+</div>
+
+<style>
+section.add_form {
+    margin: 50px auto;
+}
+section.add_form {
+    margin: 80px auto;
+    width: 60%;
+    box-shadow: 0 0 20px 1px #483d8bab;
+    padding: 20px 20px;
+}
+section.add_form form {
+    margin-bottom: 30px;
+}
+
+
+</style>

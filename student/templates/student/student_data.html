@@ -1,0 +1,113 @@
+{% load static %}
+{% include "student/header.html" %}
+
+
+<div class="container-fluid">
+<div class="container">    
+<section class="table_section">
+
+<div class="heading">
+
+ <h1>Update your Details</h1>   
+</div>
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">User name</th>
+        <th scope="col">Password</th> 
+        <th scope="col">Phone Number</th>
+        <th scope="col">Address</th>
+        <th scope="col">Date of birth</th>
+        <th scope="col">School name</th>
+        <th scope="col">Teacher name</th>
+      </tr>
+    </thead>
+    <tbody>
+         {%for detail in details %}
+      <tr>
+        <td>{{detail.first_name}}</td>
+        <td>{{detail.last_name}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.user_name}}</td>
+        <td>{{detail.password}}</td> 
+        <td>{{detail.phone_number}}</td>
+        <td>{{detail.address}}</td>
+        <td>{{detail.date_of_birth}}</td>
+        <td>{{detail.school_name}}</td>
+        <td>{{detail.teacher_name}}</td>
+        <td> <a href="/update/{{detail.id}}">Update</a> </td>
+        <td> <a href="/delete/{{detail.id}}">Delete</a> </td> 
+
+       </tr> 
+       
+    </tbody>
+  </table>
+<div class="button_section">
+
+  <ul>
+    <li class="left_btn"><button type="button" class="btn btn-primary"><a href="/add/"> Add </a></button></li>
+   <li class="right_btn"><button type="button" class="btn btn-primary"><a href="/update/"> Update </a></button></li>
+    <li class="left_btn"><button type="button" class="btn btn-primary">Delete</button></li>
+  </ul>   
+
+</div>  
+</section>
+</div>
+</div>
+
+<style>
+
+section.table_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.heading h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-family: monospace;
+}
+.button_section ul li {
+    list-style-type: none;
+}
+.button_section ul li button.btn {
+    border-radius: 0;
+    box-shadow: 4px 9px 5px 0px #5c7395;
+    min-width: 80px;
+    margin: 5px 6px 7px;
+    padding: 0;
+    overflow: hidden;
+    height: 36px;
+}
+.button_section ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 210px;
+    margin: 0;
+}
+.button_section ul li button.btn:hover {
+    background: transparent;
+    color: #337ab7;
+    border-color: #337ab7;
+    transition: 0.5s;
+    border-radius: 0 8px;
+}
+.button_section ul li button.btn:focus {
+    outline: 0;
+}
+.button_section ul li button.btn a {
+    color: #fff;
+    padding: 5px 25px;
+    display: block;
+}
+
+.button_section ul li button.btn:hover a {
+    color: #2e6da4;
+    text-decoration: none;
+}
+</style>

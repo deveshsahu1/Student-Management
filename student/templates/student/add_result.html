@@ -1,0 +1,60 @@
+{% load static %}
+{% include "student/header.html" %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1> Result Page </h1>
+
+    <form action="/add/"  method="post">
+        {% csrf_token %}
+        <!-- {{form}} -->
+        <!-- {{form.roll_no}}
+        {{data.first_name}}
+        {{data.address}} -->
+
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Student Name</th>
+                <th scope="col">Roll Number </th>
+                <th scope="col">Hindi</th>
+                <th scope="col">English</th>
+                <th scope="col">Maths</th>
+                <th scope="col">Science</th>
+                <th scope="col">Total</th>
+                <th scope="col">Percent</th>
+        
+        
+        
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr>
+                <td>{{data.first_name}}</td>
+                <td>{{form.roll_no}}</td>
+                <td>{{form.hindi}}</td>
+                <td>{{form.english}}</td>
+                <td>{{form.maths}}</td>
+                <td>{{form.science}}</td>
+                <td>{{form.total}}</td>
+                <td>{{form.percent}}</td>
+        
+              </tr>
+            
+            </tbody>
+          </table>
+        
+        <button type="submit" class="btn btn-primary btn-block" href="/add/">Submit</button>
+        <!-- <a href="/add_result/" class="button">Submit</a> -->
+      </form>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+{% load static %}
+{% include "student/header.html" %}
+
+
+<div class="container-fluid">
+  
+  <div class="container">
+    
+    <section class="add_form">
+      
+      <div class="heading">
+        
+        <h1>Add Student Details</h1>   
+      </div>
+      <p>{{msg}}</p>
+      <form action="/add/"  method="post">
+        {% csrf_token %}
+        <!-- First Name  -->
+        <div class="form-group form-outline mb-4">
+          <label for="usr">First Name:</label>
+          <input type="text" class="form-control" id="usr" name="first_name">
+        </div>
+
+
+      <!-- Last Name  -->  
+        <div class="form-group form-outline mb-4">
+          <label for="usr">  Last Name:</label>
+          <input type="text" class="form-control" id="usr" name="last_name">
+        </div>
+
+        <!-- Email  -->
+        <div class="form-group form-outline mb-4">
+          <label class="form-label" for="form1Example1">Email address</label>
+          <input type="email" id="form1Example1" class="form-control" name="email"/>
+          
+        </div>
+        
+        <!-- User Name  -->  
+        <div class="form-group form-outline mb-4">
+          <label for="usr">User Name :</label>
+          <input type="text" class="form-control" id="usr" name="username">
+        </div>
+
+        
+      <!-- phone_number  -->  
+      <div class="form-group form-outline mb-4">
+        <label for="usr">Phone Number :</label>
+        <input type="text" class="form-control" id="usr" name="phone_number">
+      </div>
+      
+      <!-- Address -->  
+      <div class="form-group form-outline mb-4">
+          <label for="usr">Address :</label>
+          <input type="text" class="form-control" id="usr" name="address">
+        </div> 
+        
+        <!--School Name--> 
+        <div class="form-group form-outline mb-4">
+          
+          <label for="usr">School Name :</label>
+          <input type="text" class="form-control" id="usr" name="school_name">
+        </div>
+
+        <!-- Teacher name
+        <div class="form-group form-outline mb-4">
+
+          <label for="usr">Teacher Name:</label>
+          <input type="text" class="form-control" id="usr" name="teacher_name">
+        </div>   -->
+
+        <!-- Password   
+        <div class="form-group form-outline mb-4">
+          <label for="usr">Password :</label>
+          <input type="text" class="form-control" id="usr" name="password">
+        </div>
+         -->
+
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+      
+    </section>
+</div>    
+</div>
+
+<style>
+  section.add_form {
+    margin: 50px auto;
+  }
+  section.add_form {
+    margin: 80px auto;
+    width: 60%;
+  box-shadow: 0 0 20px 1px #483d8bab;
+  padding: 20px 20px;
+}
+section.add_form form {
+  margin-bottom: 30px;
+}
+
+</style>
+<style>  
+    body {
+        background-color: #1abc9c ;
+        font: 20px Montserrat, sans-serif;
+        line-height: 1.8;
+        color: #f5f6f7;
+      }
+      p {font-size: 16px;}
+      .margin {margin-bottom: 45px;}
+      .bg-1 { 
+        background-color: #1abc9c; /* Green */
+        color: #ffffff;
+      }
+      .bg-2 { 
+        background-color: #474e5d; /* Dark Blue */
+        color: #ffffff;
+      }
+      .bg-3 { 
+        background-color: #ffffff; /* White */
+        color: #555555;
+      }
+      .bg-4 { 
+        background-color: #2f2f2f; /* Black Gray */
+        color: #fff;
+      }
+     
+      .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        letter-spacing: 5px;
+      }
+      .navbar-nav  li a:hover {
+        color: #1abc9c !important;
+      }
+      .account_sec {
+        background: linear-gradient(to bottom, #33ffc2 0%, #16c3c9 100%);
+    }
+    .margin {
+      margin-bottom: 43px;
+      margin-top: 52px;
+    }
+</style>
+
+ 

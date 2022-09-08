@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <!-- <th scope="col">Student Name</th> -->
+            <th scope="col">Roll Number </th>
+            <th scope="col">Hindi</th>
+            <th scope="col">English</th>
+            <th scope="col">Maths</th>
+            <th scope="col">Science</th>
+            <th scope="col">Total</th>
+            <th scope="col">Percent</th>
+            <!-- <th scope="col">Update result</th> -->
+    
+        </tr>
+        </thead>
+        <tbody>
+            {% for detail in user %}
+        <tr>
+            <!-- <td>{{detail.first_name}}</td> -->
+            <td>{{detail.roll_no}}</td>
+            <td>{{detail.hindi}}</td>
+            <td>{{detail.english}}</td>
+            <td>{{detail.maths}}</td>
+            <td>{{detail.science}}</td>
+            <td>{{detail.total }}</td>
+            <td>{{detail.percent}}</td>
+        </tr>
+        {% endfor %}
+        
+</body>
+</html>

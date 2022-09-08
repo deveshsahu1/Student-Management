@@ -1,0 +1,49 @@
+{% load static %}
+{% include "student/header.html" %}
+
+<!--Register--> 
+<div class="container py-5">
+	<h1>Student Register</h1>
+	<form method="POST" action="" class="ul">
+		{% csrf_token %}
+		{{ form.as_p }}                    
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form>
+
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+</div>
+
+<style>
+{% comment %} body {
+        background-color: #1abc9c ;
+        font: 20px Montserrat, sans-serif;
+        line-height: 1.8;
+        color: #f5f6f7;
+      } {% endcomment %}
+	form.ul {
+    display: block;
+    margin: 0 auto;
+    width: 410px;
+}
+form.ul li {
+    margin: 0 0px 15px;
+    list-style: none;
+}
+.container {
+    width: 1170px;
+    text-align: center;
+}
+
+.h1, h1 {
+    font-size: 36px;
+    margin-bottom: revert;
+}
+h1 {
+  margin: 291px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+{% comment %} form.ul li select#id_teacher_name option {
+    color: black;
+} {% endcomment %}
+</style>

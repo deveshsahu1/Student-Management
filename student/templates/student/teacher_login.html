@@ -1,0 +1,54 @@
+{% load static %}
+{% include "student/header.html" %}
+
+<!--Login--> 
+<div class="container py-5">
+  <h1> Teacher Login</h1>
+  <form method="POST" action="/teacher_login/">
+    {% csrf_token %}
+    <table class="table table-dark">
+      <thead>
+        <p>Username : <input type="text" name="username"></p>
+        <p>Password :  <input type="password" name="password"></p>  
+      </thead>
+    </table>
+    
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
+</div>
+
+<style>
+  p {
+    margin: 25px 431px 0px;
+}
+h1 {
+  margin: 291px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-left: 558px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
+
